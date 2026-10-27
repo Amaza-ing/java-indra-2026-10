@@ -1,5 +1,7 @@
 package com.icono.day2;
 
+import java.util.Arrays;
+
 public class Main {
     static void main() {
         System.out.println("Día 2");
@@ -66,6 +68,75 @@ public class Main {
         System.out.println(sumResult);
         System.out.println(sum(10, 90));
 
+//        MÉTODOS DE LOS STRINGS
+
+        String address = "C/ Gran Vía, 10, 2B";
+        System.out.println(address.length());
+        System.out.println(address.toLowerCase());
+        System.out.println(address);
+        System.out.println(address.toUpperCase().replace("A", "-"));
+
+        String fruits = String.join(", ", "Orange", "Apple", "Banana");
+        System.out.println(fruits);
+
+//        ENVOLTORIO - WRAPPER
+
+        int number = 1; // los tipos de datos primitivos no son nullables ni tienen métodos
+
+        Integer myInteger = 10;
+        System.out.println(myInteger);
+
+        Byte myByte = 127;
+        Short myShort = 1000;
+        Long myLong = 10000L;
+        Float myFloat = 1.23F;
+        Double myDouble = 9.876;
+        Boolean myBoolean = true;
+        Character myCharacter = 'a';
+
+        Integer num2 = null;
+
+        String text = "50";
+        String text2 = "15.72";
+
+        Integer textToInt = Integer.parseInt(text);
+        Double textToDouble = Double.parseDouble(text2);
+
+        System.out.println(textToInt);
+        System.out.println(textToDouble);
+
+//        SOBRECARGA DE MÉTODOS - METHOD OVERLOAD
+
+        int intResult1 = sum(10, 20);
+        System.out.println(intResult1);
+
+        int intResult2 = sum(10, 20, 30);
+        System.out.println(intResult2);
+
+        double doubleResult = sum(10.5, 4.3);
+        System.out.println(doubleResult);
+
+        int squareArea = calculateArea(5);
+        System.out.println(squareArea);
+
+        int rectangleArea = calculateArea(10, 4);
+        System.out.println(rectangleArea);
+
+        System.out.println(getUserInfo("María", 25));
+        System.out.println(getUserInfo(30, "Alberto"));
+
+//        ARRAYS
+
+        String[] days = {"lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"};
+        System.out.println(days);
+        System.out.println(Arrays.toString(days));
+        System.out.println(days[0]);
+        System.out.println(days[3].toUpperCase());
+        System.out.println(days.length);
+        System.out.println(days[days.length - 1]);
+//        System.out.println(days[days.length]); // Arrays Index Out of Bounds Exception
+
+
 
     }
 
@@ -89,5 +160,41 @@ public class Main {
 
     public static int sum(int num1, int num2) {
         return num1 + num2;
+    }
+
+    public static int sum(int num1, int num2, int num3) {
+        return num1 + num2 + num3;
+    }
+
+    public static double sum(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    public static int calculateArea(int length) {
+        return length * length;
+    }
+
+    public static int calculateArea(int length, int width) {
+        return length * width;
+    }
+
+    public static String getUserInfo(String name, int age) {
+        return name + ", " + age;
+    }
+
+    public static String getUserInfo(int age, String name) {
+        return age + ", " + name;
+    }
+
+    public static String[] createSubjectArray() {
+        String[] subjects = new String[5];
+
+        subjects[0] = "Matemáticas";
+        subjects[1] = "Lengua";
+        subjects[2] = "Historia";
+        subjects[3] = "Biología";
+        subjects[4] = "Química";
+
+        return subjects;
     }
 }

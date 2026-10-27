@@ -136,6 +136,22 @@ public class Main {
         System.out.println(days[days.length - 1]);
 //        System.out.println(days[days.length]); // Arrays Index Out of Bounds Exception
 
+        int subjectsSize = 5;
+        String[] subjectArray = createSubjectArray(subjectsSize);
+
+        System.out.println(Arrays.toString(subjectArray));
+
+//        Arrays: bucle for
+
+        for (int i = 0; i < subjectArray.length; i++) {
+            System.out.println(subjectArray[i]);
+        }
+
+//        Arrays: bucle foreach
+
+        for (String subject : subjectArray) {
+            System.out.println(subject);
+        }
 
 
     }
@@ -186,8 +202,8 @@ public class Main {
         return age + ", " + name;
     }
 
-    public static String[] createSubjectArray() {
-        String[] subjects = new String[5];
+    public static String[] createSubjectArray(int size) {
+        String[] subjects = new String[size];
 
         subjects[0] = "Matemáticas";
         subjects[1] = "Lengua";

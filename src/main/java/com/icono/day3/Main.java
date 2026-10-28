@@ -49,5 +49,28 @@ public class Main {
         movie4.setDuration(140);
         System.out.println("Película: " + movie4.getTitle() + ". Duración: " + movie4.getDuration() + "m.");
 
+        Movie.displayMessage();
+        movie1.play();
+        movie2.play();
+
+        HorrorMovie scream = new HorrorMovie("Scream", 80, true);
+        System.out.println(scream.getTitle() + " " + scream.getDuration() + " " + scream.hasScareJumps());
+        System.out.println(scream);
+        scream.play();
+
+//         COMPARACIÓN DE OBJETOS
+
+        if (movie1.getDuration() > movie2.getDuration()) {
+            System.out.println(movie1.getTitle() + " es más larga que " + movie2.getTitle());
+        } else {
+            System.out.println(movie2.getTitle() + " es más larga que " +  movie1.getTitle());
+        }
+
+        Movie movie5 = new Movie("Matrix", 100);
+        Movie movie6 = new Movie("Matrix", 100);
+
+        System.out.println(movie5);
+        System.out.println(movie6);
+        System.out.println(movie5.equals(movie6));
     }
 }

@@ -1,8 +1,11 @@
 package com.icono.day3;
 
+import java.util.Objects;
+
 public class Movie {
     private String title;
     private int duration;
+    private static final String MESSAGE = "Disfruta de esta película!";
 
     public Movie() {
     }
@@ -38,5 +41,25 @@ public class Movie {
                 "title='" + title + '\'' +
                 ", duration=" + duration +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        return duration == movie.duration && Objects.equals(title, movie.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, duration);
+    }
+
+    public void play() {
+        System.out.println("Ahora estamos viendo " + this.title);
+    }
+
+    public static void displayMessage() {
+        System.out.println(MESSAGE);
     }
 }

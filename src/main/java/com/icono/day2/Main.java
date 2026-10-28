@@ -1,5 +1,7 @@
 package com.icono.day2;
 
+import com.icono.day3.Movie;
+
 import java.util.Arrays;
 
 public class Main {
@@ -152,6 +154,11 @@ public class Main {
         for (String subject : subjectArray) {
             System.out.println(subject);
         }
+
+//        Usar una clase de fuera de este paquete
+
+        Movie movie = new Movie("La Naranja Mecánica", 120);
+        System.out.println(movie.getTitle());
 
 
     }

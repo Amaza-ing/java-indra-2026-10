@@ -1,4 +1,4 @@
-package com.icono.day4;
+package com.icono.day4.interfaces;
 
 import com.icono.day3.Movie;
 

@@ -1,4 +1,4 @@
-package com.icono.day4;
+package com.icono.day4.interfaces;
 
 public interface IPlayable {
     final double MAX_VOLUME = 1.0;

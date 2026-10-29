@@ -1,4 +1,4 @@
-package com.icono.day4;
+package com.icono.day4.interfaces;
 
 public class ApplePlayer extends Player implements IPlayable {
     public ApplePlayer(double volume, int currentTrack) {

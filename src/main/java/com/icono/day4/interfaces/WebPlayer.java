@@ -1,4 +1,4 @@
-package com.icono.day4;
+package com.icono.day4.interfaces;
 
 public class WebPlayer extends Player {
     public WebPlayer(double volume, int currentTrack) {

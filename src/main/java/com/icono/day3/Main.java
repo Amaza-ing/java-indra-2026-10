@@ -72,5 +72,12 @@ public class Main {
         System.out.println(movie5);
         System.out.println(movie6);
         System.out.println(movie5.equals(movie6));
+
+//        Clase MATH
+
+        System.out.println(Math.sqrt(64));
+        System.out.println((int) Math.pow(2, 5));
+        System.out.println((int) 4.8);
+        System.out.println((int) Math.ceil(4.8));
     }
 }
